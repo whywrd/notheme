@@ -1,0 +1,13 @@
+{% extends 'pages/info_pages/base.html' %}
+
+{% block toolbar %}
+{% include 'components/toolbars/include_dashboard.html' %}
+{% endblock %}
+
+{% block title %}
+<b><u>{{ page.meta_info['title'] }}</u></b>
+{% endblock %}
+
+{% block sub_toolbar %}
+{% include 'components/sub_toolbars/subdomain_info.html' %}
+{% endblock %}

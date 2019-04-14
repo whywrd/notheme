@@ -1,0 +1,1 @@
+<a href="{{ url_for('reblog', subdomain=post.meta_info['blog'], post_id=post.meta_info['id'], r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">reblog</a>

@@ -1,0 +1,17 @@
+h1 {
+  font-size: 400%;
+}
+
+body {
+  background-color: $background_color;
+  color: #B6B7BA;
+  width: auto;
+}
+
+a:link {
+  color: $link_color ;
+}
+
+a:visited {
+  color: $visited_link_color ;
+}

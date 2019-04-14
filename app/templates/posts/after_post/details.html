@@ -1,0 +1,19 @@
+<div class="details">
+    <div class="source">
+        {% include 'posts/after_post/source.html' %}
+    </div>
+
+    <div class="info">
+        {{ post.meta_info['date'] }}
+        {% if not post.notes %}
+        <a href="{{ url_for('subdomain_post', subdomain=post.meta_info['blog'], post_id=post.meta_info['id']) }}">{{ post.meta_info['note_count'] }} notes</a>
+        {% else %}
+        {{ post.meta_info['note_count'] }} notes
+        {% endif %}
+    </div>
+
+    {% if session.get('logged_in') and not post.source['source_url'] and not post.source['via_url'] and not post.source['blog_url'] %}
+    <br>
+    {% endif %}
+
+</div>

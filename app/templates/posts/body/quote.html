@@ -1,0 +1,6 @@
+<div class="post_body quote">
+    {{ post.body['quote'] }}
+    {% if post.body['comment'] %}
+    {{ post.body['comment']|safe }}
+    {% endif %}
+</div>

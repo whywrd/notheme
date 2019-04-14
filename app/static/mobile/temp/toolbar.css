@@ -1,0 +1,8 @@
+#toolbar {
+  font-size: 200%;
+  text-align: right;
+}
+
+#toolbar div, #toolbar a {
+  display: inline-block;
+  padding-right: 10px;}

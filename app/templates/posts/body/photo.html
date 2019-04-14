@@ -1,0 +1,11 @@
+<div class="post_body {% if post.body['photos']|length > 1 %} multi_photo {%- else %} photo {%- endif %}" style="max-width: {{ post.body['width'] }}" >
+    {% for photo in post.body['photos'] %}
+    <a href="{{ 'http://www.google.com/searchbyimage?sbisrc=cr_1_3_2&image_url={}'.format(photo['href']) }}" target="_blank"><img src="{{ photo['source'] }}"></a>
+    <br>
+    {% endfor %}
+    {% if post.body['caption'] %}
+    <div class="caption">
+        {{ post.body['caption']|safe }}
+    </div>
+    {% endif %}
+</div>

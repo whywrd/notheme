@@ -1,0 +1,13 @@
+body {
+    background-color: #27282E;
+    color: #B6B7BA;
+    max-width: 3000px;
+}
+
+a:link {
+    color: #97c3d0 ;
+}
+
+a:visited {
+    color: white ;
+}

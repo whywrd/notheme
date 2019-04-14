@@ -1,0 +1,23 @@
+{% extends 'posts/base.html' %}
+
+{% block buttons %}
+{% if session.logged_in %}
+<div class="post_buttons">
+    {% include 'posts/buttons/reblog.html' %}
+    {% include 'posts/buttons/like.html' %}
+    {% if page.is_user_blog %}
+    {% include 'posts/buttons/delete.html' %}
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block notes %}
+{% if post.notes %}
+{% include 'posts/after_post/notes.html' %}
+{% endif %}
+{% endblock %}
+
+{% block details %}
+{% include 'posts/after_post/details.html' %}
+{% endblock %}

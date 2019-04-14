@@ -1,0 +1,7 @@
+<div id="follow">
+{% if page.meta_info['followed'] %}
+    <a href="{{ url_for('unfollow', blog_name=page.meta_info['name'], r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">unfollow</a>
+{% else %}
+    <a href="{{ url_for('follow', blog_name=page.meta_info['name'], r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">follow</a>
+{% endif %}
+</div>

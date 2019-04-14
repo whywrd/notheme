@@ -1,0 +1,7 @@
+CONSUMER_KEY = 'CONSUMER_KEY'
+SECRET_KEY = 'SECRET_KEY'
+REQUEST_TOKEN_URL = 'https://www.tumblr.com/oauth/request_token'
+AUTHORIZE_URL = 'https://www.tumblr.com/oauth/authorize'
+ACCESS_TOKEN_URL = 'https://www.tumblr.com/oauth/access_token'
+OAUTH_VERIFIER = 'oauth_verifier'
+OAUTH_TOKEN = 'token'

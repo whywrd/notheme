@@ -1,0 +1,16 @@
+{%- set post_types = ['photo', 'quote', 'link', 'chat', 'audio', 'video', 'answer'] %}
+<div id="post_type">
+    <form action="{{ url_for('subdomain_type_posts', subdomain=page.meta_info['name']) }}" method="POST" id="post_type_form">
+        <select name="post_type" form="post_type_form">
+            <option value="">all</option>
+            {% for type in post_types %}
+            {% if page.kwargs['post_type'] == type %}
+            <option value="{{ type }}" selected>{{ type }}</option>
+            {% else %}
+            <option value="{{ type }}">{{ type }}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <input type="submit" value="posts">
+    </form>
+</div>

@@ -1,0 +1,9 @@
+{% for blog_info in page.content %}
+<div class="blog_info">
+    <ul>
+        {% for key, val in blog_info.description.items() %}
+        <li>{{ key }}: {{ val|safe }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}

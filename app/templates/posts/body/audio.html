@@ -1,0 +1,10 @@
+<div class="post_body audio">
+    <div class="audio_player">
+        {{ post.body['player']|safe }}
+    </div>
+    {% if post.body['caption'] %}
+    <div class="caption">
+        {{ post.body['caption']|safe }}
+    </div>
+    {% endif %}
+</div>

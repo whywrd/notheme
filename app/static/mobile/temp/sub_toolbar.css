@@ -1,0 +1,42 @@
+#sub_toolbar {
+  font-size: 200%;
+  border-top: dashed;
+  border-bottom: dashed;
+  border-width: 1px;
+  border-color: white;
+  padding: 2% 0 2% 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #35333a;
+}
+
+#sub_toolbar .left {
+  order: 0;
+}
+
+#sub_toolbar .middle {
+  order: 1;
+}
+
+#sub_toolbar .right {
+  order: 2;
+}
+
+#sub_toolbar input {
+    background: black;
+    border-color: #B6B7BA;
+    border-style: solid;
+    font-size: 75%;
+    color: #B6B7BA;
+}
+
+#sub_toolbar select {
+    background: black;
+    border-color: #B6B7BA;
+    border-style: solid;
+    font-size: 75%;
+}
+
+form {
+    margin: 0px;
+}

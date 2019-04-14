@@ -1,0 +1,13 @@
+{% extends 'pages/post_pages/base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='{}/reblog.css'.format(g.style)) }}">
+{% endblock %}
+
+{% block toolbar %}
+{% include 'components/toolbars/include_dashboard.html' %}
+{% endblock %}
+
+{% block sub_toolbar %}
+{% include 'components/sub_toolbars/subdomain_post.html' %}
+{% endblock %}

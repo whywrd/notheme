@@ -1,0 +1,11 @@
+<div class="post_body answer">
+    <b>
+        {% if post.body['asker_href'] -%}
+        <a href="{{ post.body['asker_href'] }}">{{ post.body['asker'] }}</a>
+        {%- else -%}
+        {{ post.body['asker'] }}
+        {%- endif %}
+         asked: {{ post.body['question']|safe }}
+    </b>
+    {{ post.body['answer']|safe }}
+</div>

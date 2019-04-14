@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='{}/index.css'.format(g.style)) }}">
+    <meta name="description" content="tumblr without the annoying themes"/>
+</head>
+<body>
+    {% include 'components/toolbars/include_dashboard.html' %}
+    <div id="maincontainer">
+        <img src="{{ url_for('static', filename='logo.png') }}"/>
+        {% include 'components/search_form.html' %}
+        <div id="description">
+            <p>
+                a wrapper for tumblr that strips away themes and leaves only the content.
+                toggling between tumblr and nothe.me is as easy as swapping the two domains in any tumblr url.
+                consider:
+                <a href="http://thegreendiamond.tumblr.com/">http://thegreendiamond.tumblr.com/</a>
+                vs <a href="{{ url_for('subdomain_posts', subdomain='thegreendiamond') }}">http://thegreendiamond.nothe.me/</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

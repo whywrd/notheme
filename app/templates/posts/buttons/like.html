@@ -1,0 +1,15 @@
+<span class="button_space"></span>
+{% if post.meta_info['liked'] %}
+<span id="like{{post.meta_info['id']}}" style="display:none">
+{% else %}
+<span id="like{{post.meta_info['id']}}" style=''>
+{% endif %}
+    <a href="javascript:like('{{ post.meta_info['id'] }}', '{{ post.meta_info['reblog_key'] }}', '#like{{ post.meta_info['id'] }}', '#unlike{{ post.meta_info['id'] }}');">like</a>
+</span>
+{% if post.meta_info['liked'] %}
+<span id="unlike{{post.meta_info['id']}}" style=''>
+{% else %}
+<span id="unlike{{post.meta_info['id']}}" style="display:none">
+{% endif %}
+    <a href="javascript:unlike('{{ post.meta_info['id'] }}', '{{ post.meta_info['reblog_key'] }}', '#like{{ post.meta_info['id'] }}', '#unlike{{ post.meta_info['id'] }}');">unlike</a>
+</span>

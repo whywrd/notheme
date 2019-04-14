@@ -1,0 +1,7 @@
+<div class="post_body chat">
+    {% for line in post.body['conversation'] %}
+    <p>
+        {{ line|safe }}
+    </p>
+    {% endfor %}
+</div>

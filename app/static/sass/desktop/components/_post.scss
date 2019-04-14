@@ -1,0 +1,32 @@
+.post {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: dashed;
+  border-width: 1px;
+  border-color: $border_color;
+  background-color: $post_background_color;
+  display: table;
+}
+
+.multi_photo img, .photo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2px;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+.caption blockquote {
+    margin: 0px 0px 1em 20px;
+    padding: 0px 10px 0px 10px;
+    border-left: dashed;
+    border-width: 1px;
+    border-color: $border-color;
+}
+
+.after_post {
+    padding: .5em 0 0 0;
+}

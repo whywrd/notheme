@@ -1,0 +1,9 @@
+<div class="post_body video">
+    {{ post.body['player']|safe }}
+    <br>
+    {% if post.body['caption'] %}
+    <div class="caption">
+        {{ post.body['caption']|safe }}
+    </div>
+    {% endif %}
+</div>

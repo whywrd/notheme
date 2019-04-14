@@ -1,0 +1,13 @@
+<div id="sub_toolbar">
+    <div class='left'>
+        <a href="{{ url_for('subdomain_info', subdomain=page.meta_info['name']) }}">info</a>
+    </div>
+    {% if session['logged_in'] %}
+    <div class='middle'>
+        {%- include 'components/follow_button.html' %}
+    </div>
+    {% endif %}
+    <div class='right'>
+        {%- include 'components/post_type_dropdown.html' %}
+    </div>
+</div>

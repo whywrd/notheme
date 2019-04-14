@@ -1,0 +1,7 @@
+<div id="login">
+{% if session.get('logged_in') %}
+    <a href="{{ url_for('logout', r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">logout</a>
+{% else %}
+    <a href="{{ url_for('authorize', r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">login</a>
+{% endif %}
+</div>

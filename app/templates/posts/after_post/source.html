@@ -1,0 +1,10 @@
+{% if is_dashboard and post.source['blog_url'] %}
+blog: <a href="{{ post.source['blog_url'] }}" title="{{ post.source['blog'] }}">{{ post.source['blog'] }}</a>
+<br>
+{% endif %}
+{% if post.source['source_url'] %}
+source: <a href="{{ post.source['source_url'] }}" title="{{ post.source['source'] }}">{{ post.source['source'] }}</a>
+{% endif %}
+{% if post.source['via_url'] %}
+via: <a href="{{ post.source['via_url'] }}" title="{{ post.source['via'] }}">{{ post.source['via'] }}</a>
+{% endif %}

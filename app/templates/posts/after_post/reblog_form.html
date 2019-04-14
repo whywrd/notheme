@@ -1,0 +1,18 @@
+<form action="." method="POST" id="reblog_form">
+    <textarea name="comment" form="reblog_form" rows="10" id="comment_text_area"></textarea>
+    <br>
+    {% if page.meta_info['blog_identifiers']|length > 1 %}
+    <select multiple name="blog_identifier" form="reblog_form" id="reblog_from_picklist">
+        <option value="" disabled selected>select a blog</option>
+        {% for blog_identifier in page.meta_info['blog_identifiers'] %}
+        <option>{{ blog_identifier }}</option>
+        {% endfor %}
+    </select>
+    {% else %}
+    <input type="hidden" name="blog_identifier" value="{{ page.meta_info['blog_identifiers'][0] }}">
+    {% endif %}
+    <input type="hidden" name="post_id" value="{{ post.meta_info['id'] }}">
+    <input type="hidden" name="reblog_key" value="{{ post.meta_info['reblog_key'] }}">
+    <br>
+    <input id="reblog_submit_button" type="submit" value="reblog">
+</form>

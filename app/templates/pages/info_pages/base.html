@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='{}/info.css'.format(g.style)) }}">
+</head>
+<body>
+{% block toolbar %}{% endblock %}
+<div id="maincontainer">
+    <h1>
+        {% block title %}{% endblock %}
+    </h1>
+    {% block sub_toolbar %}{% endblock %}
+    {% include 'components/blog_info.html' %}
+    {% block navigation %}{% endblock %}
+</div>
+</body>

@@ -1,0 +1,2 @@
+MOBILE = 'mobile'
+DESKTOP = 'desktop'

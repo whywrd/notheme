@@ -1,0 +1,4 @@
+<span class="button_space"></span>
+<a href="{{ url_for('delete_post', blog_identifier=page.meta_info['name'], post_id=post.meta_info['id'], r=url_for(request.url_rule.endpoint, _external=True, **request.view_args)) }}">
+    <font color="red"><b>&times</b></font>
+</a>

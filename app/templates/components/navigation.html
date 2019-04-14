@@ -1,0 +1,12 @@
+<div id="navigation">
+    {% if navigation.include_prev %}
+    <div id="prev_page">
+        <a href="{{ navigation.url_for_prev_page() }}">prev</a>
+    </div>
+    {% endif %}
+    {% if navigation.include_next %}
+    <div id="next_page">
+        <a href="{{ navigation.url_for_next_page() }}">next</a>
+    </div>
+    {% endif %}
+</div>

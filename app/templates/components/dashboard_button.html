@@ -1,0 +1,5 @@
+{% if session.get('logged_in', False) %}
+<div id="dashboard">
+    <a href="{{ url_for('dashboard') }}">dashboard</a>
+</div>
+{% endif %}

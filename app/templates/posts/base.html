@@ -1,0 +1,29 @@
+<div class="post">
+    {% if post.type == 'answer' %}
+    {% include 'posts/body/answer.html' %}
+    {% elif post.type == 'audio' %}
+    {% include 'posts/body/audio.html' %}
+    {% elif post.type == 'chat' %}
+    {% include 'posts/body/chat.html' %}
+    {% elif post.type == 'link' %}
+    {% include 'posts/body/link.html' %}
+    {% elif post.type == 'photo' %}
+    {% if is_mobile %}
+    {% include 'posts/body/mobile_photo.html' %}
+    {% else %}
+    {% include 'posts/body/photo.html' %}
+    {% endif %}
+    {% elif post.type == 'text' %}
+    {% include 'posts/body/text.html' %}
+    {% elif post.type == 'video' %}
+    {% include 'posts/body/video.html' %}
+    {% elif post.type == 'quote' %}
+    {% include 'posts/body/quote.html' %}
+    {% endif %}
+    <div class="after_post">
+        {%- block buttons %}{% endblock %}
+        {%- block details %}{% endblock %}
+        {%- block notes %}{% endblock %}
+        {%- block reblog_form %}{% endblock %}
+    </div>
+</div>

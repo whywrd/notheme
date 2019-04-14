@@ -1,0 +1,47 @@
+.post {
+  width: auto;
+  height: auto;
+  margin: 2% 0 2% 0;
+  border-bottom: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+}
+
+.post img {
+  width: 100%;
+  padding: 5px 0 5px 0;
+}
+
+.post iframe, .post video, .post embed, .post object {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.post iframe {
+  min-height: 400px;
+}
+
+.post .post_body {
+  font-size: 250%;
+  color: #B6B7BA;
+  background-color: #35333a;
+  padding: 1px;
+}
+
+.post .details, .post .caption {
+  padding-left: 1px;
+}
+
+.post .after_post {
+  font-size: 200%;
+  padding: 2% 0 1% 0;
+}
+
+.post .post_buttons {
+  display: flex;
+}
+
+.post .post_buttons a {
+   flex-basis: 15%;
+}

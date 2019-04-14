@@ -1,0 +1,28 @@
+<head>
+    {% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='{}/posts.css'.format(g.style)) }}">
+    {% endblock %}
+    {%- if session['logged_in'] %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    {%- endif %}
+</head>
+<body>
+{% block toolbar %}{% endblock %}
+<div id="maincontainer">
+    <h1>
+        <b><u>{{ page.meta_info['title'] }}</u></b>
+    </h1>
+    {%- block sub_toolbar %}{% endblock %}
+    {%- for post in page.render_posts() %}
+    {{ post|safe }}
+    {%- endfor %}
+    {%- if navigation %}
+    {%- include 'components/navigation.html' %}
+    {%- endif %}
+</div>
+</body>
+{%- if session['logged_in'] %}
+<script>
+{%- include 'components/like_script.html' %}
+</script>
+{%- endif %}

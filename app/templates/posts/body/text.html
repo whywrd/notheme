@@ -1,0 +1,10 @@
+<div class="post_body text">
+    {% if title %}
+    <h3>{{ title }}</h3>
+    {% endif %}
+    {% if post.body['text'] %}
+    <div class="text">
+        {{ post.body['text']|safe }}
+    </div>
+    {% endif %}
+</div>

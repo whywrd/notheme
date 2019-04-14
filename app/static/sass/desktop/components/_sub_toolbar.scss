@@ -1,0 +1,34 @@
+#sub_toolbar div, #sub_toolbar a {
+  display: inline-block;
+}
+
+#sub_toolbar .left {
+  padding-right: 3%;
+}
+
+#sub_toolbar .middle {
+  border-left: solid;
+  border-width: 2px;
+  border-color: $border_color;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+#sub_toolbar .right {
+  border-left: solid;
+  border-width: 2px;
+  border-color: $border_color;
+  padding-left: 3%;
+}
+
+#sub_toolbar input,
+#sub_toolbar select {
+  background: transparent;
+  border-color: $border_color;
+  border-style: solid;
+  color: $border_color;
+}
+
+form {
+  margin: 0px;
+}

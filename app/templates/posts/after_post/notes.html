@@ -1,0 +1,7 @@
+<div class="notes">
+    <ul>
+        {% for note in post.notes %}
+        <li>{{ note['type'] }}: <a href="{{ note['blog_href'] }}">{{ note['blog_name'] }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

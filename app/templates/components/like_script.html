@@ -1,0 +1,22 @@
+function like(post_id, reblog_key, like_id, unlike_id) {
+    $.post("{{ url_for('like', subdomain=page.meta_info['name'], _external=True) }}", {
+        post_id: post_id,
+        reblog_key: reblog_key
+    }).done(function() {
+        $(like_id).hide();
+        $(unlike_id).show()
+    }).fail(function() {
+        $(like_id).text('<3')
+    });
+}
+function unlike(post_id, reblog_key, like_id, unlike_id) {
+    $.post("{{ url_for('unlike', subdomain=page.meta_info['name'], _external=True) }}", {
+        post_id: post_id,
+        reblog_key: reblog_key
+    }).done(function() {
+        $(like_id).show();
+        $(unlike_id).hide();
+    }).fail(function() {
+        $(like_id).text('<3')
+    });
+}

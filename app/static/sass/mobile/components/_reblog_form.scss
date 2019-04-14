@@ -1,0 +1,20 @@
+#reblog_form {
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+}
+
+#comment_text_area {
+  font-size: 100%;
+  height: 20%;
+  margin: 3% 0 1% 0;
+}
+
+#reblog_from_picklist, #reblog_submit_button {
+  font-size: 100%;
+  text-align: center;
+}
+
+#maincontainer{
+  margin-bottom: 5%;
+}

@@ -1,0 +1,20 @@
+version: '3.0' 
+services:
+  app:
+    build: ./app
+    volumes:
+     - ./app:/code
+    networks:
+     - web
+    restart: unless-stopped
+  nginx:
+    build: ./nginx
+    ports:
+     - "80:80"
+    networks:
+     - web
+    depends_on:
+     - app
+networks:
+  web: 
+    driver: bridge
