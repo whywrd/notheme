@@ -11,11 +11,9 @@
         {% include 'components/search_form.html' %}
         <div id="description">
             <p>
-                a wrapper for tumblr that strips away themes and leaves only the content.
-                toggling between tumblr and nothe.me is as easy as swapping the two domains in any tumblr url.
-                consider:
-                <a href="http://thegreendiamond.tumblr.com/">http://thegreendiamond.tumblr.com/</a>
-                vs <a href="{{ url_for('subdomain_posts', subdomain='thegreendiamond') }}">http://thegreendiamond.nothe.me/</a>
+                A wrapper for tumblr. Consider
+                <a href="http://gifhorseinthemouth.tumblr.com/">http://gifhorseinthemouth.tumblr.com/</a>
+                vs <a href="{{ url_for('subdomain_posts', subdomain='gifhorseinthemouth') }}">http://gifhorseinthemouth.nothe.me/</a>
             </p>
         </div>
     </div>
