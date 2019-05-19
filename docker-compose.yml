@@ -1,20 +1,17 @@
-version: '3.0' 
+version: '3' 
 services:
   app:
     build: ./app
     volumes:
      - ./app:/code
-    networks:
-     - web
     restart: unless-stopped
   nginx:
-    build: ./nginx
+    build: ./nginx 
     ports:
      - "80:80"
-    networks:
-     - web
+     - "443:443"
+    volumes:
+     - /etc/letsencrypt:/etc/letsencrypt
     depends_on:
      - app
-networks:
-  web: 
-    driver: bridge
+

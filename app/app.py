@@ -11,8 +11,10 @@ from rauth import OAuth1Service
 from utils import url_utils
 import urllib.parse
 import flask_mobility
+from reverse_proxy_wrapper import ReverseProxied
 
 app = flask.Flask(__name__)
+app.wsgi_app = ReverseProxied(app.wsgi_app)
 app.config.from_object('config')
 flask_mobility.Mobility(app)
 
