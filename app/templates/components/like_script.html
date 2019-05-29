@@ -1,5 +1,5 @@
 function like(post_id, reblog_key, like_id, unlike_id) {
-    $.post("{{ url_for('like', subdomain=page.meta_info['name'], _external=True) }}", {
+    $.post("{{ url_for('like', subdomain=page.meta_info['name']) }}", {
         post_id: post_id,
         reblog_key: reblog_key
     }).done(function() {
@@ -10,7 +10,7 @@ function like(post_id, reblog_key, like_id, unlike_id) {
     });
 }
 function unlike(post_id, reblog_key, like_id, unlike_id) {
-    $.post("{{ url_for('unlike', subdomain=page.meta_info['name'], _external=True) }}", {
+    $.post("{{ url_for('unlike', subdomain=page.meta_info['name']) }}", {
         post_id: post_id,
         reblog_key: reblog_key
     }).done(function() {
