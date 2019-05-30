@@ -30,4 +30,4 @@ class LikesPage(Page):
 
     def render_posts(self):
         for post in self.content:
-            yield flask.render_template('posts/post.html', page=self, post=post)
+            yield flask.render_template('posts/post.html', page=self, post=post, include_delete=False)

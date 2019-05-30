@@ -52,6 +52,9 @@ class SubdomainPostPage(PostPage):
     def is_user_blog(self):
         return self.meta_info[RespC.BlogInfo.NAME] in flask.session.get(SeshC.USER_BLOGS, [])
 
+    def render_posts(self, **kwargs):
+        return super().render_posts(include_delete=self.is_user_blog)
+
 
 class DashboardPostPage(PostPage):
 

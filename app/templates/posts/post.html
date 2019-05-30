@@ -5,7 +5,7 @@
 <div class="post_buttons">
     {% include 'posts/buttons/reblog.html' %}
     {% include 'posts/buttons/like.html' %}
-    {% if page.is_user_blog %}
+    {% if include_delete %}
     {% include 'posts/buttons/delete.html' %}
     {% endif %}
 </div>
