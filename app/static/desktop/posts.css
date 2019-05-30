@@ -14,14 +14,13 @@
 }
 
 .multi_photo img, .photo img {
-  width: 100%;
-  height: auto;
   margin-bottom: 2px;
 }
 
 img, video {
   max-width: 100%;
   max-height: 80vh;
+  width: auto;
 }
 
 .caption blockquote {
