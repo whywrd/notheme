@@ -29,6 +29,10 @@
   color: $border_color;
 }
 
+#sub_toolbar option {
+  background-color: $background_color;
+}
+
 form {
   margin: 0px;
 }

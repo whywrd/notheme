@@ -1,5 +1,4 @@
 #maincontainer {
-  resize: horizontal;
   overflow: auto;
 }
 
@@ -22,6 +21,7 @@
 
 img, video {
   max-width: 100%;
+  max-height: 80vh;
 }
 
 .caption blockquote {
@@ -78,6 +78,10 @@ a:visited {
   border-color: #e6e6e6;
   border-style: solid;
   color: #e6e6e6;
+}
+
+#sub_toolbar option {
+  background-color: black;
 }
 
 form {
