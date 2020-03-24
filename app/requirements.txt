@@ -2,7 +2,7 @@ Flask==1.0.0
 rauth==0.7.2
 flask_mobility==0.1.1
 beautifulsoup4
-bleach==2.0.0
+bleach==3.1.2
 simplejson==3.8.2
 requests==2.20.0
 oauth2==1.9.0.post1
