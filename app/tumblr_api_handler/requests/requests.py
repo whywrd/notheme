@@ -10,7 +10,7 @@ class Request:
 
     @property
     def base_url(self):
-        return 'http://' + self._base_url.format(**self.params.of_type(ps.BaseURLParam))
+        return 'https://' + self._base_url.format(**self.params.of_type(ps.BaseURLParam))
 
     @property
     def url(self):
